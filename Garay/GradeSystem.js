@@ -1,7 +1,7 @@
 function gradeconverter(grades) {
-    if (grades == 100) return "Excellent: 1";
+    if (grades === 100) return "Excellent: 1";
     else if (grades === 98 || grades === 99) return "Excellent - 1.1";
-    else if (grades == 96 || grades === 97) return "Excellent - 1.2";
+    else if (grades === 96 || grades === 97) return "Excellent - 1.2";
     else if (grades === 94 || grades === 95) return "Excellent - 1.3";
     else if (grades === 92 || grades === 93) return "Very Good - 1.4";
     else if (grades === 90 || grades === 91) return "Very Good - 1.5";
@@ -20,9 +20,13 @@ function gradeconverter(grades) {
     else if (grades === 77) return "Below Average - 2.8";
     else if (grades === 76) return "Below Average - 2.9";
     else if (grades === 75) return "Passing - 3";
-    else if (grades === 74 || grades < 74) return "Failed - 5.0";
+    else if (grades < 74) return "Failed - 5.0";
     else return "Invalid";
 }
-let grade = prompt("Enter Grades: ");
-        console.log(gradeconverter(parseInt(grade)));
+function cleanSpace(str) {
+    return str.replace(/\s+/g, "");
+}
+let input = prompt("Enter Grades: ");
+let grade = cleanSpace(input);
+console.log(gradeconverter(parseInt(grade)));
         
