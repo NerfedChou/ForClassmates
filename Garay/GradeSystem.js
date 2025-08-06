@@ -29,4 +29,3 @@ function cleanSpace(str) {
 let input = prompt("Enter Grades: ");
 let grade = cleanSpace(input);
 console.log(gradeconverter(parseInt(grade)));
-        /*oten*/

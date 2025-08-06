@@ -46,4 +46,3 @@ elif grade <= 74:
     print("Failed - 5.0")
 else:
     print("Invalid")
-    ## oten ##

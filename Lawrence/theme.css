@@ -1,0 +1,25 @@
+body {
+    background-color: black;
+    color: white;
+}
+.login {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.login h1 {
+    justify-content: center;
+    left: 38%;
+    position: relative;
+}
+
+.sub {
+    position: relative;
+    justify-content: center;
+    left: 40%;
+}
