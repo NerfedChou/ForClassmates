@@ -23,3 +23,15 @@ body {
     justify-content: center;
     left: 40%;
 }
+.input-box {
+    position: absolute;
+    justify-content: center;
+    cursor: inherit;
+    align-content: center;
+    left: 66em;
+}
+.log-label {
+    position: relative;
+    display: flex;
+
+}

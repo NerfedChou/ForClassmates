@@ -1,4 +1,4 @@
-public class copyUmamusume {
+class copyUmamusume {
     String name;
     String speed;
     String power;

@@ -5,6 +5,7 @@
     Your last name is <?php echo $_POST["lastName"]; ?><br>
     Your Email is <?php echo $_POST["email"];  ?><br>
     Your password is <?php echo $_POST["password"]; ?><br>
+
     <?php
     echo "Welcome to the website";
         $conn = mysqli_connect("localhost", "root", "", "jan");
@@ -24,5 +25,6 @@
          }
          mysqli_close($conn);
     ?>
+
     </body>
 </html>
