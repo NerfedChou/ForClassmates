@@ -29,9 +29,24 @@ body {
     cursor: inherit;
     align-content: center;
     left: 66em;
+
 }
 .log-label {
     position: relative;
     display: flex;
+    vertical-align: middle;
+    align-items: right;
+    flex-direction: column;
+    gap: 20px;
+    right: 10px;
+    top: 130px;
 
+}
+.recapcha {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 20px;
+    width: 100%;
+    height: auto;
 }
