@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html>
+    <html lang="en">
 <head><title>Form</title></head>
 <link rel="stylesheet" type="text/css" href="theme.css">
 <body>
