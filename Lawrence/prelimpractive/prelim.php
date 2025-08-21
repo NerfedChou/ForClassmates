@@ -41,7 +41,7 @@
 $simpleString  = "Hello World";
 $simpleInt = 10;
 $simpleDouble = 10.6;
-
+ 
 echo $simpleString . "<br>";
 echo $simpleInt . "<br>";
 echo $simpleDouble . "<br><hr>";

@@ -10,7 +10,7 @@
 </head>
 <body>
     <?php
-       $name =  $_POST["name"];;
+       $name =  $_POST["name"];
        $username = $_POST["username"];
        $password = $_POST["password"];
         
