@@ -3,8 +3,8 @@ package seatWork;
 import java.util.Scanner;
 
 class accountRecovery {
-    private final accountCreation accounts;
-    private final Scanner scanner;
+    private accountCreation accounts;
+    private Scanner scanner;
 
     accountRecovery(accountCreation accounts, Scanner scanner) {
         this.accounts = accounts;

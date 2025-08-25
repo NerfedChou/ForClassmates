@@ -8,6 +8,8 @@ public class userInteraction {
         accountCreation accounts = new accountCreation(scanner);
         accounts.creating();
         Transaction transaction = new Transaction(accounts, scanner);
+        accountRich accountRich = new accountRich(accounts);
+        accountRich.printRichAccount();
         transaction.transact();
     }
 }
