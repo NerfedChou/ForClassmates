@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 class accountRecovery {
 
+    private accountCreation accounts;
+    private Scanner scanner = new Scanner(System.in);
+
     accountRecovery(accountCreation accounts, Scanner scanner) {
         this.accounts = accounts;
         this.scanner = scanner;

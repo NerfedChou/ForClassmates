@@ -9,7 +9,6 @@ public class accountRich {
         this.accounts = accounts;
     }
 
-    // Print the richest account
     void printRichAccount() {
         mainBank richest = findRichestAccount();
         if (richest == null) {
