@@ -10,3 +10,10 @@ class inheritanceExt extends inheritance {
     }
 
 }
+/*CODE REUSE
+METHOD OVERRIDING
+Extensibility
+Hierarchical relationship
+Polymorphism support
+@Override annotation
+*/
