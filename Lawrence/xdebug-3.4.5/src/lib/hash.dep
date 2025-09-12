@@ -1,0 +1,4 @@
+src/lib/hash.lo: \
+ /home/chef/GitHub/ForClassmates/Lawrence/xdebug-3.4.5/src/lib/hash.c \
+ /home/chef/GitHub/ForClassmates/Lawrence/xdebug-3.4.5/src/lib/hash.h \
+ /home/chef/GitHub/ForClassmates/Lawrence/xdebug-3.4.5/src/lib/llist.h

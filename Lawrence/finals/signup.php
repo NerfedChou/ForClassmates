@@ -1,40 +1,60 @@
 <?php
-include "conn.php";
+// 1. Establish the database connection ONCE.
+$conn = new mysqli("localhost", "root", "", "finals");
+
+// Check for connection errors
+if ($conn->connect_error) {
+    // A 500 error is often caused by a failed connection.
+    // This will show the actual error instead.
+    die("Connection failed: " . $conn->connect_error);
+}
+
+
+// --- SIGN UP LOGIC ---
 if (isset($_POST["signup"])) {
 
-    $conn = new mysqli("localhost", "root", "", "finals");
     $name = $_POST["name"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $sql = "INSERT INTO accounts (name, email, password) VALUES ('$name', '$email', '$password')";
 
-    $check = "SELECT * FROM accounts WHERE email = '$email'";
-    $result = mysqli_query($conn, $check);
-    if (mysqli_num_rows($result) > 0) {
+    // Check if email already exists
+    $check_sql = "SELECT * FROM accounts WHERE email = '$email'";
+    $result = $conn->query($check_sql); // Use the object-oriented method: $conn->query()
+
+    if ($result->num_rows > 0) {
         echo "Email already exists <br><br>";
     } else {
-        mysqli_query($conn, $sql);
-        echo "Account created successfully <br><br>";
+        // Insert the new account
+        $insert_sql = "INSERT INTO accounts (name, email, password) VALUES ('$name', '$email', '$password')";
+        if ($conn->query($insert_sql) === TRUE) {
+            echo "Account created successfully <br><br>";
+        } else {
+            // If the query fails, show the error
+            echo "Error: " . $insert_sql . "<br>" . $conn->error;
+        }
     }
-    mysqli_close($conn);
 }
 
+
+// --- LOGIN LOGIC ---
 if (isset($_POST["login"])) {
 
-    $conn = new mysqli("localhost", "root", "", "finals");
     $email = $_POST["email"];
     $password = $_POST["password"];
-    $sql = "SELECT * FROM accounts WHERE email = '$email' AND password = '$password'";
-    $result = mysqli_query($conn, $sql);
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-        echo "Welcome " . $row["NAME"] . "<br><br>";
+
+    $login_sql = "SELECT * FROM accounts WHERE email = '$email' AND password = '$password'";
+    $result = $conn->query($login_sql); // Use the object-oriented method
+
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        // Use the correct column case: "name" not "NAME"
+        echo "Welcome " . $row["name"] . "<br><br>";
         echo "<a href='Form.html'>Click here to go back to the home page</a>";
     } else {
         echo "Login failed <br><br>";
     }
-    mysqli_close($conn);
 }
 
-
-
+// Close the connection at the end of the script
+$conn->close();
+?>

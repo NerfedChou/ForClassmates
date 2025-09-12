@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="form@localhost" uuid="479e4a0d-77f8-444c-9abb-09a2b08538aa">
-      <driver-ref>sqlserver.ms</driver-ref>
+    <data-source source="LOCAL" name="@localhost" uuid="2612feaa-04a4-430f-95c4-ce1444065bec">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://localhost;database=form</jdbc-url>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
     <data-source source="LOCAL" name="@localhost" uuid="511dedf8-d60f-4325-aa18-29df984c38ad">
