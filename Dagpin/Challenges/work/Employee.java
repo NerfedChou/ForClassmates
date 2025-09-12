@@ -1,4 +1,4 @@
-package Challenges;
+package Challenges.work;
 
 class Employee {
     String name;
