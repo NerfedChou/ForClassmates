@@ -26,7 +26,7 @@ if (isset($_POST["signup"])) {
             echo "Error: " . $insert_sql . "<br>" . $conn->error;
         }
     }
-}
+}//balhina ni
 
 
 // --- LOGIN LOGIC ---
@@ -46,7 +46,7 @@ if (isset($_POST["login"])) {
     } else {
         echo "Login failed <br><br>";
     }
-}
+}//separate files dapat
 
 // Close the connection at the end of the script
 

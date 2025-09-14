@@ -12,4 +12,4 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-echo "BACK END 202 SUCCESSFULLY STATUS RUNNING";
+//echo "BACK END 202 SUCCESSFULLY STATUS RUNNING";
