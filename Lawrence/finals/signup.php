@@ -1,15 +1,8 @@
 <?php
-// 1. Establish the database connection ONCE.
-$conn = new mysqli("localhost", "root", "", "finals");
 
-// Check for connection errors
-if ($conn->connect_error) {
-    // A 500 error is often caused by a failed connection.
-    // This will show the actual error instead.
-    die("Connection failed: " . $conn->connect_error);
-}
+require_once 'connection.php';//gi balhin nako
 
-
+//antido ikaw sa system nato
 // --- SIGN UP LOGIC ---
 if (isset($_POST["signup"])) {
 
@@ -42,7 +35,7 @@ if (isset($_POST["login"])) {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $login_sql = "SELECT * FROM accounts WHERE email = '$email' AND password = '$password'";
+    $login_sql = "SELECT * FROM accounts WHERE email = '$email' AND password = '$password'"; //CONSTRUCTOR NI UNTA
     $result = $conn->query($login_sql); // Use the object-oriented method
 
     if ($result->num_rows > 0) {
@@ -56,5 +49,9 @@ if (isset($_POST["login"])) {
 }
 
 // Close the connection at the end of the script
+
+//GI CHATGPT NINNIYO KLARO KAAYO DAKPAN TANG SIR ANI
 $conn->close();
 ?>
+
+
